@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { supabase } from "../../utils/supabaseClient"
 import { useRouter } from 'next/navigation';
-import CoverImg from "@/public/assets/images/signup-one.jpg"
 import Image from "next/image";
 import { SignIn } from '@/components/signin';
 
@@ -30,7 +29,7 @@ export default function Login() {
     <div className="flex items-center justify-between h-screen">
       <div className="relative w-1/3 h-full shadow-inner">
         <Image
-          src={CoverImg}
+          src="/public/assets/images/signup-one.jpg"
           alt="Cover Image"
           fill
           className="object-cover shadow-inner"
