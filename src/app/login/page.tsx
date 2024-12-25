@@ -29,7 +29,7 @@ export default function Login() {
     <div className="flex items-center justify-between h-screen">
       <div className="relative w-1/3 h-full shadow-inner">
         <Image
-          src="/public/assets/images/signup-one.jpg"
+          src="/assets/images/signup-one.jpg"
           alt="Cover Image"
           fill
           className="object-cover shadow-inner"
@@ -38,7 +38,7 @@ export default function Login() {
       </div>
       <div className="w-2/3 h-full flex items-center justify-center relative">
         <div className="absolute top-6 left-6">
-          <h1 className="font-roboto text-6xl font-extrabold">Middle.</h1>
+          <h1 className="font-roboto text-6xl font-extrabold cursor-pointer" onClick={() => router.push('/')}>Middle.</h1>
         </div>
         <div className=''>
           <SignIn />
