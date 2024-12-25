@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        logo: "#748cab"
+      },
+      fontFamily: {
+        'serif': ['"DM Serif Text"', 'serif'],
+        'roboto': ["Roboto Condensed", "serif"]
       },
     },
   },
