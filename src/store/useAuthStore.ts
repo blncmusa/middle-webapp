@@ -7,7 +7,7 @@ interface AuthState {
   error: string | null;
   setEmail: (email: string) => void;
   setPassword: (password: string) => void;
-  login: () => Promise<void>;
+  login: () => Promise<boolean>;
 }
 
 export const useAuthStore = create<AuthState>((set, get) => ({
@@ -23,8 +23,10 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     });
     if (error) {
       set({ error: error.message });
+      return false;
     } else {
-      // Handle successful login (e.g., redirect)
+      set({ error: null });
+      return true;
     }
   },
 }));

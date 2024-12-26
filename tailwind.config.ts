@@ -17,6 +17,9 @@ export default {
         'serif': ['"DM Serif Text"', 'serif'],
         'roboto': ["Roboto Condensed", "serif"]
       },
+      screens: {
+        'custom-767': '767px'
+      }
     },
   },
   plugins: [],
