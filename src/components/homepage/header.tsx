@@ -23,17 +23,17 @@ export default function Header() {
       }`}
       style={{ backgroundImage: "url('/assets/images/cov.jpg')" }}
     >
-      <header className="flex w-full justify-between items-center h-[10%] px-4">
+      <header className="flex w-full justify-between items-center h-[10%] py-10 px-4">
         <div className="pl-4">
           <h1
-            className="font-roboto text-4xl font-extrabold cursor-pointer text-white"
+            className="font-roboto text-4xl font-thin cursor-pointer text-white"
             onClick={() => router.push("/")}
           >
             Middle.
           </h1>
         </div>
         <div className="flex gap-6 text-white items-center">
-          <div className="flex gap-6 text-white">
+          <div className="flex gap-6 text-white text-md ">
             <p className="cursor-pointer">Goals</p>
             <p className="cursor-pointer">Join Us</p>
             <p className="cursor-pointer">Download</p>
