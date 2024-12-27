@@ -1,27 +1,30 @@
-"use client"
+"use client";
 
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Header from "@/components/homepage/header";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
 
-  const router = useRouter()
+  useEffect(() => {
+    // Delay to ensure everything is ready
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust this to set the fade-in delay
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="w-full h-screen">
-      <header className="flex w-full justify-between items-center">
-        <div className="pl-4">
-        <h1 className="font-roboto text-4xl font-extrabold cursor-pointer">Middle.</h1>
-      </div>
-      <div className="flex gap-6">
-          <p>Goals</p>
-          <p>Join Us</p>
-          <p>Download</p>
-      </div>
-        <button className="bg-black text-white p-4" onClick={() => router.push('/login')}>
-          Sign In
-        </button>
-      </header>
-    </div>
+    <>
+      {isLoading ? (
+        <div className="w-full h-screen flex items-center justify-center bg-gray-200">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+        </div>
+      ) : (
+        <div className="w-full h-screen">
+          <Header />
+        </div>
+      )}
+    </>
   );
 }
